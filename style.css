@@ -226,7 +226,7 @@ html, body{
 .cardRow{
 	margin: 20px;
 	background: #fff;
-	border: 1px solid #CB6074;
+	/*border: 1px solid #CB6074;*/
 	text-align: center;
 	box-shadow: 0 5px 9px 0 rgba(0,0,0,0.9);
 }
@@ -238,13 +238,13 @@ html, body{
 .card-img{
 	position: relative;
 	text-align: center;
-	background: #fa0c6b;
+	background: none;
 }
 #cardImg{
 	width: 250px;
 	height: 250px;
 	padding-bottom: 30px;
-	border-bottom : 1px solid #fa0c6b;
+
 }
 #cardImg:before{
 	content:'';
@@ -264,15 +264,18 @@ html, body{
 	font-size: 22px;
 	bottom: 5px;
 	width: 100%;
-	color: white;
+	color: #fa0c6b;
 	font: system-ui;
+	letter-spacing: 1px;
+	border-top : 4px solid #fa0c6b;
+	border-bottom : 4px solid #fa0c6b;
 }
 		
 .card-price{
 	font-size: 22px;
-	font-weight: 100;
+	font-weight: bolder;
 	padding: 0 12px;
-	padding-bottom: 10px;
+	padding-top: 5px;
 	display: flex;
 }
 

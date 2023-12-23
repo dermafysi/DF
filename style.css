@@ -12,10 +12,11 @@ html, body{
 	overflow-x: hidden;
 }
 
-/*footer{
-	color: #04b5a0;
-	font-weight: bold;
-}*/
+#footerNav{
+	width: 50px;
+	margin-top: 8px;
+	cursor: pointer;
+}
 
 /* >>>>> index.html CSS <<<<< */
 /*

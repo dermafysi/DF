@@ -27,35 +27,37 @@ html, body{
 }*/
 
 /* >>>>> NAVIGATION BAR <<<<<*/
-
+/*
 #logo{
 	width: 18%;
 	opacity: 1;
 	margin-bottom: 7px;
 	box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2);
-}
+}*/
 
-.navbar {
+.navbarMain {
+	position:sticky;
 	overflow: hidden;
 	background-image: linear-gradient(180deg, rgb(250, 161, 185), rgb(249, 148, 175), rgb(239, 139, 166), rgb(252, 154, 180));
-	margin-bottom: 7px;
 }
 
-.navbar a {
+.navbarMain a {
 	float: left;
 	display: block;
-	font-size: 30px;
-	font-style: normal;
-	color: white;
-	text-align: center;
-	padding: 6px 8px;
-	margin-left: 3%;
-	text-decoration: none;
-	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.6);
+	margin-left: 1.5%;
 }
 
-.navbar a:hover{
+.navBar a{
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+.navBar a:hover{
+	font-size: 30px;
 	background-color: black;
+	padding: 6px 8px;
 	color: white;
 }
 

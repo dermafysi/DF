@@ -102,10 +102,6 @@ html, body{
 	color: white
 }
 
-.dropdown:hover .dropdown-content{
-	display: block;
-}
-
 /* >>>>> INDEX IMAGE OVERLAY CSS <<<<< */
 
 .homePageImg{

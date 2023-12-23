@@ -37,12 +37,15 @@ html, body{
 
 .navbarMain {
 	background-image: linear-gradient(180deg, rgb(250, 161, 185), rgb(249, 148, 175), rgb(239, 139, 166), rgb(252, 154, 180));
+	overflow: hidden;
 }
 
 .navbarMain a {
 	float: left;
 	display: block;
 	margin-left: 1.5%;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 #navLink {
@@ -61,26 +64,34 @@ html, body{
 
 .dropdown {
 	overflow: hidden;
+	float: left;
 }
 
 .dropdown .dropbtn {
-	font-size: 22px;
+	font-size: 25px;
+	color: white;
+	text-align: center;
 	border: none;
 	outline: none;
 	background-color: inherit;
 	font-family: inherit;
-	margin: 0;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .dropdown-content{
 	display: none;
 	position: absolute;
-    	font-size: 20px;
-	background-color: white;
-	color: #bb4f63;
+    font-size: 20px;
+	background-color: none;
 	width: auto;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 8px 16px 0px #CB6074;
 	z-index: 1;
+	padding-top: 17px;
+	padding-right: 27px;
+	margin-left: 10px;
 }
 
 .dropdown-content a{
@@ -93,8 +104,10 @@ html, body{
 }
 
 .dropdown-content a:hover{
-	background-color: #CB6074;
-	color: white;
+	color: #fa0c6b;
+	font-size: 30px;
+	font-weight: bolder;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .dropdown:hover .dropdown-content{
@@ -137,9 +150,10 @@ html, body{
 }
 
 #MSHlogo{
-  	width: 15%;
+	width: 15%;
 	opacity: 1;
 	box-shadow: 0 5px 9px 0 rgba(0,0,0,0.5);
+	overflow: hidden;
 }
 
 .img{
@@ -190,28 +204,31 @@ html, body{
 }
 
 /* PRODUCT CARD */
+
+#productTitle{
+	overflow: hidden;
+	margin-top: 50px;
+	margin-bottom: 80px;
+	width: 250px;
+  	opacity: 1;
+  	box-shadow: 0 5px 9px 0 rgba(0,0,0,0.5);
+}
+
 @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Slabo+27px);
 @import 'bourbon';
 
-#readH{
-	font-size:32px;
-	margin-top:30px;
-	font-family: 'Oswald', sans-serif;	
-	text-align:center;
-}
 .wrapRow{
-	padding: 15px;
+	margin-left: 25px;
 	display: inline-flex;
-	flex-direction:row;
-	flex-wrap:wrap;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 .cardRow{
-	transition: .3s;
-	max-width: 400px;
 	margin: 20px;
 	background: #fff;
 	border: 1px solid #CB6074;
 	text-align: center;
+	box-shadow: 0 5px 9px 0 rgba(0,0,0,0.9);
 }
 			
 .card-img img{
@@ -221,13 +238,13 @@ html, body{
 .card-img{
 	position: relative;
 	text-align: center;
-	background: #CB6074;
+	background: #fa0c6b;
 }
 #cardImg{
-	transition: .3s;
-	max-height: 240px;
-	width: 100%;
-	border-bottom :4px solid #CB6074;
+	width: 250px;
+	height: 250px;
+	padding-bottom: 30px;
+	border-bottom : 1px solid #fa0c6b;
 }
 #cardImg:before{
 	content:'';
@@ -241,30 +258,27 @@ html, body{
 	border-left: solid 10px transparent;
 	border-right: solid 10px transparent;
 }
-#readH{
+#card-name{
 	position:absolute;
-	margin:0;
-	font-size:42px;
-	bottom:15px;
-	width:100%;
-	color:#fff;
-	font-family: 'Slabo 27px', serif;
+	margin: 0;
+	font-size: 22px;
+	bottom: 5px;
+	width: 100%;
+	color: white;
+	font: system-ui;
 }
 		
-.card-date{
-	margin-top: 10px;
-	font-family: 'Roboto', sans-serif;
-	color:#3C3C3C;
-}
-.card-date span{		
-	padding: 0 30px;
-}
-.card-date span	i{
-	margin-right:5px;
+.card-price{
+	font-size: 22px;
+	font-weight: 100;
+	padding: 0 12px;
+	padding-bottom: 10px;
+	display: flex;
 }
 
 .card-text{
-	padding:20px 15px;
+	display: flex;
+	padding: 5px 12px;
 	font-family: 'Roboto', sans-serif;
 	line-height:22px;
 }

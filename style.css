@@ -36,6 +36,7 @@ html, body{
 }*/
 
 .navbarMain {
+	position: sticky;
 	overflow: hidden;
 	background-image: linear-gradient(180deg, rgb(250, 161, 185), rgb(249, 148, 175), rgb(239, 139, 166), rgb(252, 154, 180));
 }
@@ -46,14 +47,14 @@ html, body{
 	margin-left: 1.5%;
 }
 
-.navBar a{
+.NavBar a{
 	font-size: 25px;
 	color: white;
 	text-align: center;
 	text-decoration: none;
 }
 
-.navBar a:hover{
+.NavBar a:hover{
 	font-size: 30px;
 	background-color: black;
 	padding: 6px 8px;

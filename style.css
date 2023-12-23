@@ -93,8 +93,8 @@ html, body{
 }
 
 .dropdown-content a:hover{
-	background-color: #CB6074;;
-	color: white
+	background-color: #CB6074;
+	color: white;
 }
 
 .dropdown:hover .dropdown-content{

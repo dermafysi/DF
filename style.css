@@ -36,7 +36,6 @@ html, body{
 }*/
 
 .navbarMain {
-	position:sticky;
 	overflow: hidden;
 	background-image: linear-gradient(180deg, rgb(250, 161, 185), rgb(249, 148, 175), rgb(239, 139, 166), rgb(252, 154, 180));
 }

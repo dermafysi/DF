@@ -47,14 +47,14 @@ html, body{
 	margin-left: 1.5%;
 }
 
-.NavBar a{
+#navLink {
 	font-size: 25px;
 	color: white;
 	text-align: center;
 	text-decoration: none;
 }
 
-.NavBar a:hover{
+#navLink:hover{
 	font-size: 30px;
 	background-color: black;
 	padding: 6px 8px;

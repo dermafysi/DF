@@ -19,23 +19,51 @@ html, body{
 
 /* >>>>> NAVIGATION BAR <<<<<*/
 
+/* MOBILE VIEW */
+
 .navbarMain {
 	background-image: linear-gradient(180deg, rgb(250, 161, 185), rgb(249, 148, 175), rgb(239, 139, 166), rgb(252, 154, 180));
 	overflow: hidden;
 }
 
+.nav-toggle{
+	position: relative;
+	cursor: pointer;
+	top: 7px;
+	right: 30px;
+	margin-right: 15px;
+}
+
+#nav-checkbox{
+	display: none;
+}
+
+.close{
+	float: left;
+	display: none;
+	margin-left: 50px;
+	margin-top: 6px;
+	margin-bottom: 15px;
+	padding-right: 32%;
+}
+
+.menu{
+	float: left;
+	margin-left: 50px;
+	margin-top: 6px;
+}
+
+#main-logo{
+	float: left;
+}
+
 .navbarMain a {
 	float: left;
-	display: block;
-	margin-left: 1.5%;
-	padding-top: 15px;
-	padding-bottom: 15px;
 }
 
 #navLink {
 	font-size: 25px;
 	color: white;
-	text-align: center;
 	text-decoration: none;
 }
 
@@ -59,23 +87,20 @@ html, body{
 	outline: none;
 	background-color: inherit;
 	font-family: inherit;
-	margin-top: 10px;
 	margin-left: 20px;
-	padding-top: 15px;
+	margin-right: 20px;
 	padding-bottom: 15px;
 }
 
 .dropdown-content{
 	display: none;
 	position: absolute;
-    font-size: 20px;
-	background-color: none;
+	font-size: 25px;
+	background-color: white;
 	width: auto;
 	box-shadow: 0px 8px 16px 0px #CB6074;
 	z-index: 1;
-	padding-top: 17px;
-	padding-right: 27px;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 .dropdown-content a{
@@ -85,20 +110,118 @@ html, body{
 	text-decoration: none;
 	display: block;
 	text-align: left;
+	margin-top: 5px;
 }
 
 .dropdown-content a:hover{
-	color: #fa0c6b;
-	font-size: 30px;
-	font-weight: bolder;
-	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	color: white;
+	background-color: black;
 }
 
 .dropdown:hover .dropdown-content{
 	display: block;
 }
 
-/* >>>>> INDEX CSS <<<<< */
+.nav-menu li{
+	display: none;
+	color: inherit;
+}
+
+.nav-checkbox:checked ~ ul.nav-menu li{
+	display: block;
+}
+
+.nav-checkbox:checked ~ label.nav-toggle .close{
+	display: block;
+}
+
+.nav-checkbox:checked ~ label.nav-toggle .menu{
+	display: none;
+}
+
+/* DESKTOP VIEW */
+
+@media only screen and (min-width:560px){
+	.navbarMain .nav-toggle{
+		display: none;
+	}
+
+	.navbarMain .nav-menu{
+		flex-direction: row;
+	}
+
+	.nav-menu li{
+		display: block;
+	}
+
+	.navbarMain a {
+		float: left;
+		margin-left: 1.5%;
+	}
+
+	#navLink {
+		font-size: 25px;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	#navLink:hover, .dropdown:hover .dropbtn{
+		font-size: 30px;
+		background-color: black;
+		padding: 6px 8px;
+		color: white;
+	}
+
+	.dropdown {
+		overflow: hidden;
+		float: left;
+	}
+
+	.dropdown .dropbtn {
+		font-size: 25px;
+		color: white;
+		text-align: center;
+		border: none;
+		outline: none;
+		background-color: inherit;
+		font-family: inherit;
+		margin-left: 20px;
+		padding-bottom: 15px;
+	}
+
+	.dropdown-content{
+		display: none;
+		position: absolute;
+		font-size: 25px;
+		background-color: white;
+		width: auto;
+		box-shadow: 0px 8px 16px 0px #CB6074;
+		z-index: 1;
+		margin-left: 20px;
+	}
+	
+	.dropdown-content a{
+		float: none;
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+		margin-top: 5px;
+	}
+	
+	.dropdown-content a:hover{
+		color: white;
+		background-color: black;
+	}
+
+	.dropdown:hover .dropdown-content{
+		display: block;
+	}
+}
+
+/* >>>>> INDEX IMAGE OVERLAY CSS <<<<< */
 
 .homePageImg{
 	position: relative;
@@ -115,6 +238,7 @@ html, body{
 	box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2);
 	margin-bottom: 4%;
 }
+
 .txtBlock{
 	position: absolute;
 	top: 0;
@@ -125,7 +249,6 @@ html, body{
 	opacity: 2;
 	background-image: linear-gradient(180deg, rgb(248, 87, 130), rgb(251, 128, 161), rgb(247, 163, 156), rgb(248, 87, 130));
 	color: white;
-	/*font-size: 100px;*/
 	font-size:300%;
 	text-align: center;
 	padding-top: 50px;
@@ -182,7 +305,6 @@ html, body{
 	grid-template-columns: 300px 1fr;
 	align-items: center;
 	max-width: 90%;
-	/*margin-left: 15%;*/
 	font: 500 100%/1.5 system-ui;
   	transition: 0.3s;
 }
@@ -196,6 +318,7 @@ html, body{
 	width: 250px;
   	opacity: 1;
   	box-shadow: 0 5px 9px 0 rgba(0,0,0,0.5);
+	z-index: 1;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Slabo+27px);
@@ -207,10 +330,10 @@ html, body{
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+
 .cardRow{
 	margin: 20px;
 	background: #fff;
-	/*border: 1px solid #CB6074;*/
 	text-align: center;
 	box-shadow: 0 5px 9px 0 rgba(0,0,0,0.9);
 }
@@ -224,12 +347,14 @@ html, body{
 	text-align: center;
 	background: none;
 }
+
 #cardImg{
-	width: 250px;
+	width: 280px;
 	height: 250px;
 	padding-bottom: 30px;
 
 }
+
 #cardImg:before{
 	content:'';
 	position: absolute;
@@ -242,6 +367,7 @@ html, body{
 	border-left: solid 10px transparent;
 	border-right: solid 10px transparent;
 }
+
 #card-name{
 	position:absolute;
 	margin: 0;
@@ -268,4 +394,43 @@ html, body{
 	padding: 5px 12px;
 	font-family: 'Roboto', sans-serif;
 	line-height:22px;
+}
+
+
+.card-content:hover .dropbtn-name {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+	border-radius: 35%;
+}
+
+.card-content {
+	overflow: hidden;
+	float: left;
+}
+
+.card-content .dropbtn-name {
+	font-size: 15.5px;
+	color: white;
+	border: none;
+	outline: none;
+	background-color: black;
+	font-family: inherit;
+	padding: 3px 12px;
+	margin-bottom: 6px;
+}
+
+.dropBtn-content {
+	display: none;
+	text-align: left;
+    font-size: 20px;
+	background-color: white;
+	width: auto;
+	box-shadow: 0px 8px 16px 0px #CB6074;
+	position: absolute;
+	z-index: 1;
+}
+
+.card-content:hover .dropBtn-content {
+	display: block;
 }
